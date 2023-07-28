@@ -86,8 +86,8 @@ body {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
- .header .current {
-  color: #404bbf
+.header .current {
+  color: #404bbf;
 }
 
 .current::after {
@@ -100,7 +100,6 @@ body {
   border-radius: 2px;
   background-color: #404bbf;
 }
-
 
 .nav-list:hover {
   color: #404bbf;
@@ -123,6 +122,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--adress-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .adress-list:hover {
@@ -208,6 +208,34 @@ body {
   background-color: #404bbf;
 }
 
+/* modal */
+
+/* .backdrop {
+} */
+
+.modal {
+  position: relative;
+  width: 408px;
+  height: 584px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: var(--dairy, #fcfcfc);
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  margin: 0 auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* section desc */
 
 .desc {
@@ -260,6 +288,16 @@ body {
   overflow: hidden;
 }
 
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  background-color: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
 /* work-desc section */
 
 .work-desc {
@@ -281,6 +319,11 @@ body {
 .team-section {
   background-color: #f4f4fd;
   padding: 120px 0;
+  
+}
+
+.team-sectin-list {
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-section-title {
@@ -315,6 +358,47 @@ body {
 .team-section .list-title {
   text-align: center;
 }
+
+.list-desc {
+  margin-bottom: 8px;
+}
+
+.social-network-icon {
+  width: 232px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.social-network-list {
+  display: flex;
+}
+
+.social-network-item {
+  width: 40px;
+  height: 40px;
+}
+
+.social-network-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+}
+
+.social-network {
+  fill: #f4f4fd;
+}
+
+
+
+.social-network-link:hover, .social-network-link:focus {
+  background-color: #404bbf;
+} 
 
 /* footer */
 
@@ -417,10 +501,6 @@ body {
 .section-filter .container .row-gap {
   row-gap: 48px;
   column-gap: 24px;
-}
-
-.filter-list-items {
-  /* width: calc((100% - 48px) / 3); */
 }
 
 .card-filter {
