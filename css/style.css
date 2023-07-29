@@ -211,14 +211,12 @@ body {
 
 /* modal */
 
-/* .backdrop {
-} */
-
 .modal {
-  position: relative;
+  position: fixed;
   width: 408px;
   height: 584px;
-  flex-shrink: 0;
+  top: 0;
+  left: 0;
   border-radius: 4px;
   background: var(--dairy, #fcfcfc);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
@@ -391,7 +389,7 @@ body {
   height: 100%;
   background-color: #4d5ae5;
   border-radius: 50%;
-  background-color: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-network {
@@ -429,7 +427,8 @@ body {
   align-items: center;
   justify-content: center;
   color: var(--icon-color);
-  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-color: 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-link:hover {
@@ -454,7 +453,7 @@ body {
 }
 
 .footer {
-  background-color: var(--logo-color);
+  transition: background-color var(--logo-color);
   padding: 100px 0;
 }
 
@@ -507,8 +506,6 @@ body {
 .footer .social-network-list {
   gap: 16px;
 }
-
-
 
 .footer .social-network-link:hover,
 .footer .social-network-link:focus {
