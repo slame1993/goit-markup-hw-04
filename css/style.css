@@ -6,6 +6,7 @@
   --adress-color: #434455;
   --footer-info-color: #f4f4fd;
   --btn-border: 1px solid #e7e9fc;
+  --icon-color: #8e8f99;
 }
 
 * {
@@ -319,11 +320,12 @@ body {
 .team-section {
   background-color: #f4f4fd;
   padding: 120px 0;
-  
 }
 
 .team-sectin-list {
-  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .team-section-title {
@@ -394,11 +396,10 @@ body {
   fill: #f4f4fd;
 }
 
-
-
-.social-network-link:hover, .social-network-link:focus {
+.social-network-link:hover,
+.social-network-link:focus {
   background-color: #404bbf;
-} 
+}
 
 /* section customers */
 
@@ -408,20 +409,49 @@ body {
 
 .customers-list {
   display: flex;
+  gap: 24px;
+  justify-content: center;
 }
 
-.customers-list-item {
+.customers .customers-list-items {
   width: calc((100% - 120px) / 6);
   height: 88px;
 }
 
+.customers-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color);
+}
 
+.customers-link:hover {
+  color: #404bbf;
+  border-color: #404bbf;
+}
+
+.customers-icon {
+  fill: currentColor;
+}
 
 /* footer */
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
 
 .footer {
   background-color: var(--logo-color);
   padding: 100px 0;
+}
+
+.footer-logo {
+  margin-right: 120px;
 }
 
 .logo-span-footer {
@@ -453,6 +483,27 @@ body {
   text-transform: uppercase;
   color: var(--logo-web-locor);
   padding: 24px 0;
+}
+
+.footer-social-media {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  color: var(--baclground-color);
+  margin-bottom: 16px;
+}
+
+.footer .social-network-list {
+  gap: 16px;
+
+}
+
+.footer .social-network-link:hover,
+ .footer .social-network-link:focus {
+  background-color: #31D0AA;
 }
 
 /* portfolio */
