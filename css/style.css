@@ -375,6 +375,7 @@ body {
 
 .social-network-list {
   display: flex;
+  justify-content: center;
 }
 
 .social-network-item {
@@ -498,12 +499,11 @@ body {
 
 .footer .social-network-list {
   gap: 16px;
-
 }
 
 .footer .social-network-link:hover,
- .footer .social-network-link:focus {
-  background-color: #31D0AA;
+.footer .social-network-link:focus {
+  background-color: #31d0aa;
 }
 
 /* portfolio */
