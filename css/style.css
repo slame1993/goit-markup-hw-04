@@ -645,6 +645,9 @@ body {
 .link-items:hover .filter-overlay-desc {
   transform: translateY(0%);
 }
+.link-items:focus .filter-overlay-desc {
+  transform: translateY(0%);
+}
 
 .filter-overlay-desc {
   position: absolute;
